@@ -38,6 +38,8 @@ app.post("/login", (req, res) => {
 	}
 });
 
+//verify if the login matches or not
+
 app.use(isLoggedIn);
 app.get("/home", (req, res) => {
 	res.send("Welcome User");
