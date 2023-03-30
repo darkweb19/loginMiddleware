@@ -3,7 +3,7 @@
 const express = require("express");
 const app = express();
 
-// //!Routing level middle warer
+// //!Routing level middle ware
 // //Simplifying those middleware function
 // const hasName = (req, res, next) => {
 // 	if (!req.query.name) return res.send("Please provide a name");

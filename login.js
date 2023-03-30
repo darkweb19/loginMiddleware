@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 app.set("view engine", "ejs");
-
 const session = require("express-session");
+
 app.use(
 	session({
 		secret: "secret",
@@ -12,6 +12,7 @@ app.use(
 	})
 );
 
+//this is middle ware
 const isLoggedIn = (req, res, next) => {
 	if (req.session.login) {
 		next();
@@ -20,6 +21,7 @@ const isLoggedIn = (req, res, next) => {
 	}
 };
 
+//parser also a middleware
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/login", (req, res) => {
