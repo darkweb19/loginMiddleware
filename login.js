@@ -37,7 +37,6 @@ app.post("/login", (req, res) => {
 		res.redirect("/login");
 	}
 });
-
 //verify if the login matches or not
 
 app.use(isLoggedIn);
